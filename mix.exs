@@ -9,6 +9,7 @@ defmodule RestorationOfErathia.MixProject do
       start_permanent: Mix.env() == :prod,
       description: description(),
       package: package(),
+      source_url: "https://github.com/AndriyLazorenko/restoration_of_erathia",
       deps: deps()
     ]
   end
@@ -26,8 +27,8 @@ defmodule RestorationOfErathia.MixProject do
 
   defp package() do
     [
-    licenses: [],
-    links: %{"Github" => ""}
+    licenses: ["MIT License"],
+    links: %{"Github" => "https://github.com/AndriyLazorenko/restoration_of_erathia"}
     ]
   end
 
