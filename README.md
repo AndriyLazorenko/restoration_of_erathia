@@ -4,7 +4,7 @@ A tool to assist with restoring deleted files, made for Linux OS
 
 
 ## Usage
-####Usecase
+#### Usecase
 Imagine having to restore deleted files from hdd (or SSD or USB flash drive) using tools like `photorec`.
 
 At the end of the restoration process you end up having multiple folders with all sorts of files in them.
@@ -13,7 +13,7 @@ It looks messy, filenames differ from original ones, there are multiple duplicat
 
 The tool is aimed at helping out the user.
 
-####Initial configuration
+#### Initial configuration
 There are several things that need to be configured before running the script.
 
 Module constant `@path` corresponds to the path of the folder where restored data is (in form of `recup.1.dir`, `recup.2.dir`, ... folders).
@@ -23,7 +23,7 @@ Module constant `@formats` corresponds to different formats that are highly rele
 For example, you might not care about images, executable files, dlls or code, just the documents, spreadsheets, presentations and pdfs.
 Please add/remove formats to this module constant so that it corresponds better to your needs.
 
-####Main usage
+#### Main usage
 Run in terminal `iex -S mix` followed by
 ```
 r = RestorationOfErathia
@@ -34,7 +34,7 @@ This function will move all the files of pre-specified format to separate folder
 deduplicate files, move all the other files to
 common folder `merged` and will delete any empty folders. 
 
-####Extras
+#### Extras
 Now imagine that you have an old backup which contains some pdf files from a flashdrive and you'd like 
 to remove those existing files from recovered ones. There is a function to facilitate that:
 
