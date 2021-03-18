@@ -63,7 +63,7 @@ The package can be installed by adding `restoration_of_erathia` to your list of 
 ```elixir
 def deps do
   [
-    {:restoration_of_erathia, "~> 0.1.0"}
+    {:restoration_of_erathia, "~> 0.1.1"}
   ]
 end
 ```
