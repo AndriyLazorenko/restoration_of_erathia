@@ -46,6 +46,9 @@ defmodule RestorationOfErathia do
   defp extract_dir(dirname, format) do
     Path.wildcard("#{dirname}/*.#{format}")
     |> Enum.map(fn filepath -> move_to_dir(filepath, format) end)
+
+    Path.wildcard("#{dirname}/*")
+    |> Enum.map(fn filepath -> move_to_dir(filepath, "*") end)
   end
 
   @doc ~S"""
@@ -58,10 +61,10 @@ defmodule RestorationOfErathia do
       iex> r = RestorationOfErathia
       iex> {:ok, wd} = File.cwd()
       iex> File.mkdir("#{wd}/tmp")
-      iex> File.touch("#{wd}/tmp/test.txt")
-      iex> r.move_to_dir("#{wd}/tmp/test.txt", "txt")
-      iex> File.rm("#{wd}/tmp/txt/test.txt")
-      iex> File.rmdir("#{wd}/tmp/txt")
+      iex> File.touch("#{wd}/tmp/test")
+      iex> r.move_to_dir("#{wd}/tmp/test", "*")
+      iex> File.rm("#{wd}/tmp/merged/test")
+      iex> File.rmdir("#{wd}/tmp/merged")
       iex> File.rmdir("#{wd}/tmp")
       :ok
 
