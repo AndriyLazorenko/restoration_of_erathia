@@ -26,8 +26,7 @@ Please add/remove formats to this module constant so that it corresponds better 
 #### Main usage
 Run in terminal `iex -S mix` followed by
 ```
-r = RestorationOfErathia
-r.run()
+RestorationOfErathia.run()
 ```
 
 This function will move all the files of pre-specified format to separate folders,
@@ -39,8 +38,7 @@ Now imagine that you have an old backup which contains some pdf files from a fla
 to remove those existing files from recovered ones. There is a function to facilitate that:
 
 ```
-r = RestorationOfErathia
-r.deduplicate_between_folders(folder_path_uniq, folder_path_duplicate)
+RestorationOfErathia.deduplicate_between_folders(folder_path_uniq, folder_path_duplicate)
 ```
 in here, the folder with the backup pdfs will be `folder_path_uniq` and folder with the restored pdfs will
 be `folder_path_duplicate`. And the function will remove all the files already existing in `folder_path_uniq` from
@@ -49,8 +47,7 @@ be `folder_path_duplicate`. And the function will remove all the files already e
 Now imagine that you have duplicates inside some other folder, not related to restoration process, but there are
 so many files in that folder that you can't be bothered to deduplicate them manually. No problem, as
 ```
-r = RestorationOfErathia
-r.deduplicate_folder(folder_path)
+RestorationOfErathia.deduplicate_folder(folder_path)
 ```
 will remove all the duplicate files from a folder.
 
